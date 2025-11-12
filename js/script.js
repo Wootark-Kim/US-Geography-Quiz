@@ -1,9 +1,13 @@
-//Event listeners
-document.querySelector("button").addEventListener("click", gradeQuiz);
-
 //Global variables
 var score = 0;
 var attempts = localStorage.getItem("total_attempts");
+var slider = document.getElementById("q10");
+var output = document.getElementById("sliderValue");
+
+//Event listeners
+document.querySelector("button").addEventListener("click", gradeQuiz);
+slider.addEventListener("input", () => {output.textContent = slider.value;});
+
 
 displayQ4Choices();
 displayQ8Choices();
@@ -87,6 +91,7 @@ function gradeQuiz(){
 	let q6Response = document.querySelector("#q6").value;
 	let q8Response = document.querySelector("input[name=q8]:checked").value;
 	let q9Response = document.querySelector("#q9").value.toLowerCase();
+	let q10Response = document.querySelector("#q10").value;
 	console.log(q1Response);
 	console.log(q2Response);
 
@@ -172,10 +177,17 @@ function gradeQuiz(){
 	}
 
 	//Grading question 10 ======================================================================
-	if (document.querySelector("#Pacific").checked && 
-	    document.querySelector("#Atlantic").checked && 
-	    document.querySelector("#Artic").checked &&
-	   !document.querySelector("#Indian").checked) {
+	// if (document.querySelector("#Pacific").checked && 
+	//     document.querySelector("#Atlantic").checked && 
+	//     document.querySelector("#Artic").checked &&
+	//    !document.querySelector("#Indian").checked) {
+	// 	rightAnswer(10);
+	// }
+	// else{
+	// 	wrongAnswer(10);
+	// }
+
+	if (q10Response == 3){
 		rightAnswer(10);
 	}
 	else{

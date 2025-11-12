@@ -1,3 +1,21 @@
+.topTitle {
+    background-color: #450101 !important;
+    color: orange;
+}
+
 body{
     background-color: #F0CBC5;
+}
+
+footer {
+    background-color: #450101;
+	font-size: 0.7em;
+	color: orange;
+}
+
+#logo{
+    border: 2px solid orange;
+	border-radius: 15px;
+	width: 120px;
+	height: auto;
 }
