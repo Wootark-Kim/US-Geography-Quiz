@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<!--[HEAD] ------------------------------------------- -->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>US Geography Quiz</title>
+		<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"> </script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="css/styles.css" rel="stylesheet">
+
+	</head>
+
+	<!--[BODY] ------------------------------------------- -->
+
+	<body class="text-center">
+		<h1 class="p-5 bg-info"> US Geography Quiz </h1>
+		
+		<!-- -----[Question 1]----- -->
+		<br>
+		<h3 > <span id="markImg1"></span> What is the capital of California? </h3>
+		<input type="text" id="q1">
+
+		<br><br>
+		<div id="q1Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 2]----- -->
+		<h3>
+			<span id="markImg2"></span>
+			What is the longest river?
+		</h3>
+
+		<select id="q2">
+			<option value="">Select One</option>
+			<option value="ms">Mississippi</option>
+			<option value="mo">Missouri</option>
+			<option value="co">Colorado</option>
+			<option value="de">Delaware</option>
+		</select>
+
+		<br><br>
+		<div id="q2Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 3]----- -->
+		<h3>
+			<span id="markImg3"></span>
+			What presidents are carved into Mount Rushmore?
+		</h3>
+		
+		<input type="checkbox" id="Jackson"> <label for="Jackson"> A.Jackson </label>
+		<input type="checkbox" id="Franklin"> <label for="Franklin"> B.Franklin </label>
+		<input type="checkbox" id="Jefferson"> <label for="Jefferson"> T.Jefferson </label>
+		<input type="checkbox" id="Roosevelt"> <label for="Roosevelt"> T.Roosevelt </label>
+
+		<br><br>
+		<div id="q3Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 4]----- -->
+		<h3>
+			<span id="markImg4"></span>
+			What is the smallest US State?
+		</h3>
+	
+		<div id="q4Choices"></div>
+
+		<br><br>
+		<div id="q4Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 5]----- -->
+
+		<h3> <span id="markImg5"></span> Which state has the longest coastline? </h3>
+		<input type="text" id="q5">
+
+		<br><br>
+		<div id="q5Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 6]----- -->
+		<h3>
+			<span id="markImg6"></span>
+			Which city is geographically more "west" than Los Angeles, CA?
+		</h3>
+
+		<select id="q6">
+			<option value="">Select One</option>
+			<option>Riverside, CA</option>
+			<option>Springdale, UT</option>
+			<option>Reno, NV</option>
+			<option>Oceanside, CA</option>
+		</select>
+
+		<br><br>
+		<div id="q6Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 7]----- -->
+		<h3>
+			<span id="markImg7"></span>
+			Which state(s) have both Crocodile and Aligators as native species? 
+		</h3>
+		
+		<input type="checkbox" id="Louisiana"> <label for="Louisiana"> Louisiana </label>
+		<input type="checkbox" id="Florida"> <label for="Florida"> Florida </label>
+		<input type="checkbox" id="Mississippi"> <label for="Mississippi "> Mississippi </label>
+		<input type="checkbox" id="SouthCarolina"> <label for="SouthCarolina"> South Carolina </label>
+
+		<br><br>
+		<div id="q7Feedback"></div>
+		<hr><br>
+		<!-- -----[Question 8]----- -->
+		<h3>
+			<span id="markImg8"></span>
+			Did you know USA has a mountain taller than Mt. Everest? Which one is it?
+		</h3>
+	
+		<div id="q8Choices"></div>
+
+		<br><br>
+		<div id="q8Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 9]----- -->
+		<h3 > <span id="markImg9"></span> Which state is "triply landlocked"? </h3>
+		<input type="text" id="q9">
+
+		<br><br>
+		<div id="q9Feedback"></div>
+		<hr><br>
+
+		<!-- -----[Question 10]----- -->
+		<h3>
+			<span id="markImg10"></span>
+			Which oceans do the United States touch?
+		</h3>
+		
+		<input type="checkbox" id="Pacific"> <label for="Pacific"> Pacific </label>
+		<input type="checkbox" id="Indian"> <label for="Indian"> Indian </label>
+		<input type="checkbox" id="Atlantic"> <label for="Atlantic"> Atlantic </label>
+		<input type="checkbox" id="Artic"> <label for="Artic"> Artic </label>
+
+		<br><br>
+		<div id="q10Feedback"></div>
+		<hr><br>
+
+		<!-- ---------------------- -->
+
+		<h3 id="validationFdbk" class="bg-danger text-white"></h3>
+		<button class="btn btn-success"> Submit Quiz </button>
+
+		<br>
+		<h2 id="totalScore" class="text-info"></h2>
+
+		<div id="progressBar" class="progress mx-auto" style="width: 50%"> 
+			<div id="percentageBar" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+			0%
+			</div>
+		</div>
+
+		<h2 id="finalFeedback" class="text-info"></h2><br>
+		<h3 id="totalAttempts"></h3><br><br><br>
+	
+
+		<script src="js/script.js"></script>
+	</body>
+
+</html>
